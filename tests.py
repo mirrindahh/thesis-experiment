@@ -22,7 +22,7 @@ def test_has_min_length(password, expected):
 def test_has_uppercase(password, expected):
     assert has_uppercase(password) == expected
 @pytest.mark.parametrize("password,expected", [
-    ("ABCDEf”, False),
+    ("ABCDEf", False),
     ("abcdef", True),
     ("Abcdef", True),
 ])
@@ -33,10 +33,10 @@ def test_has_lowercase(password, expected):
     ("abc123", True),
     ("ABC", False),
     ("1aA", True),
-    ("!@#", False)
+    ("!@#", False),
     ("1234567", True), 
-    (“abc3”, True),
-    ("a7Aa, True)
+    ("abc3", True),
+    ("a7Aa", True)
 ])
 def test_has_digit(password, expected):
     assert has_digit(password) == expected
